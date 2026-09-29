@@ -1,0 +1,141 @@
+<!-- Create an Interactive Profile Card using HTML, CSS and JavaScript.
+
+Your goal is to make the profile interactive using the DOM concepts and events you have learned so far.
+
+
+
+Requirements:
+1. Create a Profile Card
+
+Create a profile card containing:
+
+Profile name
+Profile image
+Profile role/designation
+A short description
+At least two buttons
+You can design the card according to your own creativity. But build logic exact.  ok
+
+
+
+2. Change Profile Information
+
+Create a button that changes the profile information when clicked.
+
+When the button is clicked, at least these things should change:
+
+Profile name
+Profile role
+Profile heading/title
+
+
+3. Change Profile Image
+
+Create another button that changes the profile image when clicked.
+
+Use a different image for the changed profile.
+
+
+
+4. Mouse Events
+
+Apply mouse events to the profile image.
+
+When the mouse moves over the image, something should happen.
+
+When the mouse moves away from the image, the original state should return.
+
+
+
+5. User Input
+
+Add an input field where the user can enter their name.
+
+Add a button that takes the entered name and displays it inside the profile card.
+
+
+
+Your project must include the events you have learned so far, including:
+
+Click event
+Mouseover event
+Mouseout event
+
+
+Creativity: Do not make your project look exactly like your friend's project.
+
+You are encouraged to add your own:
+
+Colors
+Fonts
+Layout
+Images
+Buttons
+Text
+Card design
+
+
+⭐ Bonus Challenge
+If you want to challenge yourself, add an extra feature to your profile card using the DOM concepts you have learned.
+
+For example, you can make another part of the profile change when the user interacts with it.
+
+
+
+⚠️ Important Instructions
+
+
+Do not use addEventListener() for this assignment.
+Use the event methods and DOM concepts taught in class.
+Do not copy your friend's complete project.
+Try to write the logic yourself before asking for help.
+Your project should be fully functional, not just visually designed.
+Logic and functionality are more important than advanced design.
+
+
+🎯 Main Goal
+The purpose of this assignment is to revise your previous JavaScript concepts and improve your logic building and DOM skills.
+
+Don't just make the project look good make sure JavaScript is actually controlling the page. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="card" id="mycard">
+        <h3 id="cardtittle" class="text">My Profile</h3>
+        <img 
+            id="profileimg"
+             src="image/boys.jpg"
+             onmouseover="hoverImg()" 
+             onmouseout="outImg()"
+             >
+            <h2 id="name">Muhammad Ahmed</h2>
+            <p class="write" id="role">Student</p>
+            <p class="para" id="desc">I love learning for web development</p>
+
+            <button class="update" onclick="changeinfo()">Updated Card</button>
+            <button class="change" onclick="changeimage()">Change Image</button>
+            
+            <br><br>
+
+            <input class="typing" type="text" id="userInput" placeholder="Enter new name">
+            <!-- <br><br> -->
+            <button class="changename" onclick="updateName()">Change Name</button>
+          <br><br>
+
+          <button class="rang" onclick="changeColor()">Change Color</button>
+        
+    </div>
+    
+
+
+</body>
+</html>
